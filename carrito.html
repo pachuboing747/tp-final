@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Productos Seleccionados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+  </head>
+  <body class="background">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img src="../assets/cabj.png" alt="cabj" width="80"></a>
+                <span class="navbar-toggler-icon"></span>
+              </div>  
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-end">
+                <a href="carrito.html" title="Carrito" class="btn btn position-relative">
+                    <img src="../assets/carrito.png" alt="Carrito" width="24" />
+                    <span id="carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h1 class="encabezado text-center">Productos Seleccionados</h1>
+        <div id="productos" class="row">
+
+        </div>
+    </div>
+
+    <div class="container py-5">
+      <div class="row mb-4">
+        <div class="col-lg-8 mx-auto text-center">
+          <h1 class="encabezado display-4">Forma de Pago</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-7 mx-auto">
+          <div class=" bg-white rounded-lg shadow-sm p-3">
+            <ul>
+              <li class=" text-center">
+                <a class="tc">
+                  Tarjeta de Credito
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade show active">
+                <form name="formula" id="formulario" onsubmit="return validateForm()">
+                  <div class="form-group">
+                    <label class="tc" for="username">Nombre Completo (segun figura en la tarjeta)</label>
+                    <input id="nya" type="text" name="username" placeholder="Jose Perez"  class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="tc" for="cardNumber">Numero de Tarjeta</label>
+                    <div class="input-group">
+                      <input id="tarjeta"  type="password" name="cardNumber" placeholder="Tu numero de Tarjeta" class="form-control"  minlength="13" maxlength="18" required>
+              
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <div class="form-group">
+                        <label><span class=" tc hidden-xs">Fecha de vencimiento</span></label>
+                        <div class="input-group">
+                          <input id="mes" type="number" required placeholder="MM" name="mes" class="form-control"  maxlength="2">
+                          <input id="annio" type="number" required placeholder="AA" name="annio" class="form-control" maxlength="2" >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group mb-4">
+                        <label  class="tc" data-toggle="tooltip">CVV
+                        <i class="fa fa-question-circle"></i>
+                        </label>
+                        <input id="cvv"  type="password" required placeholder="123" class="form-control" maxlength="3">
+                      </div>
+                    </div>
+                  </div>
+                  <button id="myBtn" class="btn-ok" >Confirmar</button>
+                </form>
+              </div>
+
+            </div>
+          
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/productos.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/sweet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+  
+  
+   
+  </body>
+</html>
